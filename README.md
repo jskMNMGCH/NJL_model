@@ -1,6 +1,9 @@
 # NJL Model Analysis of Dense Quark Matter
 
 This project implements a numerical analysis of dense quark matter using a two-flavor NJL (Nambu–Jona-Lasinio) model approach. The code primarily calculates thermodynamic quantities such as the grand potential, quark number density, normalized baryon density, pressure, and energy density by solving a self-consistent gap equation for the effective quark mass \(M\) and an effective chemical potential \(\mu_{\text{tilde}}\).
+  
+  ![Sample density plots](fig/example.png)
+  ![Sample phase diagram](fig/phase_diag.png)
 
 ## Features
 
