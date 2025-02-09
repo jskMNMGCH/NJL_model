@@ -26,19 +26,38 @@ This project implements a numerical analysis of dense quark matter using a two-f
   - `pressure(T, μ)`: Computes the pressure.
   - `energy_dens(T, μ)`: Computes the energy density.
 
-## Requirements
+## Global Variables
 
-- **Julia 1.6 or later** is recommended.
-- The project requires the following Julia packages:
-  - `QuadGK` for numerical integration.
-  - `NLsolve` for solving nonlinear systems.
-- A file named `constants.jl` must be included in the project; it should define the global constants, for example:  
-  `Nf_o`, `Nc_o`, `Lambda_o`, `G`, `m_o`, `hbarc`, and `rho0`.
+The following global constants are used throughout the analysis for physical quantities and unit conversions. These are defined in the `const.jl` file and should be kept consistent across the computations:
 
-## Installation and Setup
+### Physical Constants:
+- `hbarc`: Reduced Planck's constant times the speed of light in MeV·fm (\(197.32698044404107\)).
+- `rho0`: Nuclear saturation density in fm\(^-3\) (0.17).
 
-1. **Clone the Repository:**
-   ```bash
-   git clone <repository_url>
-   cd <repository_directory>
+### Parameters for the NJL-type Quark Model:
+- `Nf`: Number of flavors (2).
+- `Nc`: Number of colors (3).
+- `Lambda`: Coupling constant (587.9 MeV).
+- `Gs`: Coupling constant for the scalar channel (calculated as \(2.44/\Lambda^2\)).
+- `Gv`: Coupling constant for the vector channel (same as `Gs`).
+- `m`: Quark mass in MeV (5.6).
+
+### Parameters for the Original NJL Model:
+- `Nf_o`: Number of flavors (2).
+- `Nc_o`: Number of colors (3).
+- `Lambda_o`: Coupling constant (587.9 MeV).
+- `G`: Coupling constant for the original NJL model (calculated as \(2.44/\Lambda_o^2\)).
+- `m_o`: Quark mass in MeV (5.6).
+
+These global constants are crucial for the proper functioning of the model and should be set before performing any calculations.
+
+## References
+M. Buballa, Phys. Rept. 407, 205-376 (2005) doi:10.1016/j.physrep.2004.11.004 [arXiv:hep-ph/0402234
+[hep-ph]].
+
+## Contributing
+Feel free to submit issues or pull requests to improve this project.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
 

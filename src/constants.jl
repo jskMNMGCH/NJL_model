@@ -1,5 +1,4 @@
 # Physical constants
-const c = 2.99792458e10  # [cm/sec]
 const hbarc = 197.32698044404107 # [MeV fm]
 const rho0 = 0.17  # fm^-3
 
